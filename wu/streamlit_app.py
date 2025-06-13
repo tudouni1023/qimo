@@ -66,7 +66,7 @@ def load_recommendation_model():
         seed=42,
         )
         model2 = collab_learner(dls, n_factors=30, y_range=(0, 5))
-        model2.load_state_dict(torch.load('models/best.pth'))
+        model2.load_state_dict(torch.load('wu/best.pth'))
         st.success("✅ 推荐模型加载成功")
         return model2
         #return learn
