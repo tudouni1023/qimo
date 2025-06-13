@@ -385,7 +385,7 @@ def main():
             if st.session_state.get('identified_foods'):
                 st.success("食物识别成功！")
                 st.write(f"已识别到食物！它是{st.session_state.identified_foods[0]['food_name']},概率为{st.session_state.identified_foods[0]['confidence']*100:.1f}%")
-            else 'identified_foods' in st.session_state and not st.session_state.identified_foods:
+            elif 'identified_foods' in st.session_state and not st.session_state.identified_foods:
                 st.warning("未识别到食物，请尝试上传清晰的餐盘照片")
       
     
